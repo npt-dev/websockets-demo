@@ -1,0 +1,28 @@
+service: exp-backend
+frameworkVersion: '2'
+stage: dev
+region: us-east-1
+provider:
+  name: aws
+  runtime: nodejs12.x
+  profile: me
+  lambdaHashingVersion: 20201221
+
+plugins:
+  - serverless-webpack
+
+package:
+  individually: true
+
+functions:
+  websockets:
+    handler: lambdas/websockets/index.handler
+    events:
+      - websocket:
+          route: $connect
+      - websocket:
+          route: $disconnect
+      - websocket:
+          route: $default
+      - websocket:
+          route: onMessage

@@ -1,0 +1,8 @@
+{
+    "requestContext": {
+        "routeKey": "onMessage",
+        "connectionId": "apbb-cg5oAMCLEg=",
+        "domainName": "8vlvc11rdg.execute-api.us-east-1.amazonaws.com",
+        "stage": "dev"
+    }
+}

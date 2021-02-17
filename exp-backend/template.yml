@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  expbackenddevwebsockets:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambdas/websockets/index.handler
+      Runtime: nodejs12.x
+      CodeUri: .
+      Description: ''
+      MemorySize: 1024
+      Timeout: 6
+      Role: 'arn:aws:iam::442414839672:role/exp-backend-dev-us-east-1-lambdaRole'
+      Tags:
+        STAGE: dev
